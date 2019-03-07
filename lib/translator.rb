@@ -7,6 +7,7 @@ def load_library(path)
   binding.pry
   lib = {"get_meaning" => {}, "get_emoticon" => {}}
   emo = YAML.load_file(path)
+  puts emo
   emo.each.keys do |entry|
     puts entry
     word = entry.keys[0]
