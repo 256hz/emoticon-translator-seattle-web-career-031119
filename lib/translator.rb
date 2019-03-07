@@ -1,7 +1,22 @@
-# require modules here
+require "yaml"
+require "pry"
 
-def load_library
-  # code goes here
+path = "./emoticons.yml"
+
+def load_library(path)
+  emo = YAML.load_file(path)
+  lib = {"get_meaning" => {}, "get_emoticon" => {}}
+  emo.each.keys do |entry|
+    puts entry
+    word = entry.keys[0]
+    emoE = emo[word][0]
+    emoJ = emo[word][1]
+    puts "#{word}, #{emoE}, #{emoJ}"
+    lib[get_meaning][emoJ] = word
+    lib[get_emoticon][emoE] = emoJ
+  end
+  puts lib
+  lib
 end
 
 def get_japanese_emoticon
