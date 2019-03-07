@@ -1,7 +1,7 @@
 require "yaml"
 require "pry"
 
-path = ""
+path = "emoticons.yml"
 
 def load_library(path)
   lib = {"get_meaning" => {}, "get_emoticon" => {}}
