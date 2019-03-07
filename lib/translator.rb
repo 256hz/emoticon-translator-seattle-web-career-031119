@@ -4,7 +4,7 @@ require "pry"
 path = "lib/emoticons.yml"
 
 def load_library(path)
-  binding.pry
+  #binding.pry
   lib = {"get_meaning" => {}, "get_emoticon" => {}}
   emo = YAML.load_file(path)
   puts emo
