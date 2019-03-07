@@ -4,8 +4,8 @@ require "pry"
 path = "./emoticons.yml"
 
 def load_library(path)
-  emo = YAML.load_file(path)
   lib = {"get_meaning" => {}, "get_emoticon" => {}}
+  emo = YAML.load_file(path)
   emo.each.keys do |entry|
     puts entry
     word = entry.keys[0]
